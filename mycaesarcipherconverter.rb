@@ -1,7 +1,17 @@
 
-ascii = "test".chars.map { |c| c.ord }
+puts "Please enter text to encrypt."
+text = gets.chomp.downcase
 
-shifted = ascii.map { |c| c + 5 }
-shifted.map { |c| c.chr }.join
+puts "Please enter your number."
+n = gets.chomp.to_i
 
-#ermagerd
+def caesar (text, n)
+  alpha = ("a".."z").to_a
+
+text.cycle(n)
+
+
+# = "test".chars.map { |c| c.ord }
+
+#shifted = ascii.map { |c| c + 5 }
+#shifted.map { |c| c.chr }.join
